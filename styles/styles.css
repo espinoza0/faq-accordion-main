@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+body{
+    font-family: "Work Sans", system-ui;
+    font-size: 16px;
+    background-color: var(--Light-pink);
+}
+#container{
+    background-image: url('../assets/images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0% 0%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.faq-container{
+    background-color: var(--White);
+    padding: 2rem;
+    border-radius: .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 40rem;
+    margin: 2rem;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(185, 184, 184, 0.3) 0px 30px 60px -30px; 
+}
+h3{
+    font-size: min(3.8vw, 1.2rem);
+    transition: color .25s ease;
+}
+h3:hover{
+    color: #AD28EB;
+}
+.faq-title{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.faq-title h1{
+    font-size: 2.75rem;
+    color: var(--Dark-purple);
+}
+.faq-accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.faq-accordion > div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faq-accordion > div > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.faq-accordion > div img{
+    cursor: pointer;
+}
+.faq-accordion > div > div:last-of-type{
+    opacity: .5;
+    line-height: 1.35rem;
+}
+hr{
+    border: .5px solid rgba(211, 211, 211, 0.752);
+}
